@@ -2,8 +2,7 @@ const quotes = require("./quotes/quotes.json");
 
 // Get quote to guess
 const randomIndex = Math.floor(Math.random() * quotes.length);
-// const quoteToGuess = quotes[randomIndex];
-const quoteToGuess = "Den pegede mod nord ik";
+const quoteToGuess = "Den pegede mod nord ik"; // const quoteToGuess = quotes[randomIndex];
 
 let chosenCharsByUser = [];
 let userQuoteGuess = "";

@@ -10,7 +10,10 @@ let userQuoteGuess = "";
 // First we diplay all the characters of the quote to guess with underscores or blanks
 displayQuoteToGuess();
 
-// Then the user gets to either choose a char or guess the entire quote
+// While the user hasn't guessed to the quote keep playing
+while (userQuoteGuess !== quoteToGuess) {
+  // First we prompt the user for either
+}
 
 function displayQuoteToGuess() {
   let stringToPrint = "\n";

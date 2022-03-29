@@ -23,7 +23,8 @@ while (userQuoteGuess !== quoteToGuess) {
   checkUserGuess(userGuess.toLowerCase());
 }
 
-console.log("HEEYYYYY!!! Du gættede det :)");
+console.log("HEEYYYYY!!! Du gættede det ..");
+console.log("Slesvig? Det tror nok vi hør!");
 
 function displayQuoteToGuess() {
   let stringToPrint = "\n";
@@ -31,6 +32,8 @@ function displayQuoteToGuess() {
   for (let index in quoteToGuess) {
     if (quoteToGuess[index] === " ") {
       stringToPrint += "  ";
+    } else if (chosenCharsByUser.includes(quoteToGuess[index])) {
+      stringToPrint += `${quoteToGuess[index]} `;
     } else {
       stringToPrint += "_ ";
     }

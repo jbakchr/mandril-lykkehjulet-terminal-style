@@ -22,9 +22,6 @@ while (userQuoteGuess !== quoteToGuess) {
   checkUserGuess(userGuess.toLowerCase());
 }
 
-console.log("HEEYYYYY!!! Du gættede det ..");
-console.log("Slesvig? Det tror nok vi hør!");
-
 function getQuoteToGuess() {
   const randomIndex = Math.floor(Math.random() * quotes.length);
   return quotes[randomIndex].toLowerCase();
@@ -59,4 +56,9 @@ function checkUserGuess(userGuess) {
       userQuoteGuess = userGuess;
     }
   }
+}
+
+function goodbyeMessage() {
+  console.log("HEEYYYYY!!! Du gættede det ..");
+  console.log("Slesvig? Det tror nok vi hør!");
 }

@@ -15,6 +15,10 @@ let userQuoteGuess = "";
 
 // While the user hasn't guessed to the quote keep playing
 while (userQuoteGuess !== quoteToGuess) {
+  keepPlayingGame();
+}
+
+function keepPlayingGame() {
   clear();
   console.log(HEADER);
   displayQuoteToGuess();

@@ -8,8 +8,7 @@ const QUESTION =
   "Choose character [e.g. 'a', 'm', 'x' and os on] or try to guess the entire quote: ";
 
 // Get quote to guess
-const randomIndex = Math.floor(Math.random() * quotes.length);
-const quoteToGuess = quotes[randomIndex].toLowerCase();
+const quoteToGuess = getQuoteToGuess();
 
 let chosenCharsByUser = [];
 let userQuoteGuess = "";
@@ -25,6 +24,11 @@ while (userQuoteGuess !== quoteToGuess) {
 
 console.log("HEEYYYYY!!! Du gættede det ..");
 console.log("Slesvig? Det tror nok vi hør!");
+
+function getQuoteToGuess() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  return quotes[randomIndex].toLowerCase();
+}
 
 function displayQuoteToGuess() {
   let stringToPrint = "\n";

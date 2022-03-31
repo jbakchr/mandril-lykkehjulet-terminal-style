@@ -1,7 +1,7 @@
 const clear = require("clear");
 const prompt = require("prompt-sync")();
 
-const quotes = require("./quotes/quotes.json");
+const quotes = require("../quotes/quotes.json");
 
 const HEADER = "!! MANDRIL LYKKEHJULET !!";
 const QUESTION =

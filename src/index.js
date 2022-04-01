@@ -1,4 +1,4 @@
-const clear = require("clear");
+const clearConsole = require("clear");
 const prompt = require("prompt-sync")();
 
 const quotes = require("../quotes/quotes.json");
@@ -18,17 +18,22 @@ while (userQuoteGuess !== quoteToGuess) {
   keepPlayingGame();
 }
 
+printGoodbyeMessage();
+
 function keepPlayingGame() {
-  clear();
-  console.log(HEADER);
+  clearConsole();
+  printHeader();
   displayQuoteToGuess();
-  let userGuess = prompt(QUESTION);
-  checkUserGuess(userGuess.toLowerCase());
+  letUserGuessQuote();
 }
 
 function getQuoteToGuess() {
   const randomIndex = Math.floor(Math.random() * quotes.length);
   return quotes[randomIndex].toLowerCase();
+}
+
+function printHeader() {
+  console.log(HEADER);
 }
 
 function displayQuoteToGuess() {
@@ -47,6 +52,11 @@ function displayQuoteToGuess() {
   console.log(stringToPrint + "\n");
 }
 
+function letUserGuessQuote() {
+  let userGuess = prompt(QUESTION);
+  checkUserGuess(userGuess.toLowerCase());
+}
+
 function checkUserGuess(userGuess) {
   if (userGuess.length === 1) {
     if (chosenCharsByUser.includes(userGuess)) {
@@ -62,7 +72,7 @@ function checkUserGuess(userGuess) {
   }
 }
 
-function goodbyeMessage() {
+function printGoodbyeMessage() {
   console.log("HEEYYYYY!!! Du gættede det ..");
   console.log("Slesvig? Det tror nok vi hør!");
 }

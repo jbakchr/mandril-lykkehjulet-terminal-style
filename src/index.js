@@ -1,7 +1,7 @@
 const clearConsole = require("clear");
 const prompt = require("prompt-sync")();
 
-const quotes = require("../quotes/quotes.json");
+const { getQuoteToGuess } = require("./utils/quotes");
 
 const HEADER = "!! MANDRIL LYKKEHJULET !!";
 const QUESTION =
@@ -25,11 +25,6 @@ function keepPlayingGame() {
   printHeader();
   displayQuoteToGuess();
   letUserGuessQuote();
-}
-
-function getQuoteToGuess() {
-  const randomIndex = Math.floor(Math.random() * quotes.length);
-  return quotes[randomIndex].toLowerCase();
 }
 
 function printHeader() {
